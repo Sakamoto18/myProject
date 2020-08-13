@@ -1,0 +1,111 @@
+// 定义全局进入渲染动画
+.v-enter,
+.v-leave-to{
+    opacity: 0;
+    transform: translateX(30px);
+}
+.v-enter-active,
+.v-leave-active{
+    transition: all 1s ease;
+}
+@function getTop($num) {
+    @return $num * 2px;
+}
+@function getTopPercent($num) {
+    @return $num * 1%;
+}
+@for $i from 6 to 80 {
+    .top-#{2*$i}{
+        top: $i * 2px
+    }
+    .tp-#{2*$i}{
+        top: $i * 1%
+    }
+}
+@for $i from 0 to 100 {
+    .animation-#{$i} {
+        animation: radomTop-#{$i} 2s infinite;
+        -webkit-animation: radomTop-#{$i} 2s infinite; /*表示无限循环*/
+    }
+    @keyframes radomTop-#{$i} {
+        0% { top: getTop($i); }
+        50% { top: getTop($i) + 10px; }
+        100% { top: getTop($i); }
+    }
+    @-webkit-keyframes radomTop-#{$i} {
+        0% { top: getTop($i); }
+        50% { top: getTop($i) + 10px; }
+        100% { top: getTop($i); }
+    }
+    .animation-down-#{$i} {
+        animation: radomTopDown-#{$i} 2s infinite;
+        -webkit-animation: radomTopDown-#{$i} 2s infinite; /*表示无限循环*/
+    }
+    @keyframes radomTopDown-#{$i} {
+        0% { top: getTop($i); }
+        50% { top: getTop($i) - 10px; }
+        100% { top: getTop($i); }
+    }
+    @-webkit-keyframes radomTopDown-#{$i} {
+        0% { top: getTop($i); }
+        50% { top: getTop($i) - 10px; }
+        100% { top: getTop($i); }
+    }
+    .ap-#{$i} {
+        animation: radomTopPercent-#{$i} 2s infinite;
+        -webkit-animation: radomTopPercent-#{$i} 2s infinite; /*表示无限循环*/
+    }
+    @keyframes radomTopPercent-#{$i} {
+        0% { top: getTopPercent($i); }
+        50% { top: calc(#{$i}% + 10px); }
+        100% { top: getTopPercent($i); }
+    }
+    @-webkit-keyframes radomTopPercent-#{$i} {
+        0% { top: getTopPercent($i); }
+        50% { top: calc(#{$i}% + 10px); }
+        100% { top: getTopPercent($i); }
+    }
+    .ap-delete-#{$i} {
+        animation: radomTopPercentDelete-#{$i} 2s infinite;
+        -webkit-animation: radomTopPercentDelete-#{$i} 2s infinite; /*表示无限循环*/
+    }
+    @keyframes radomTopPercentDelete-#{$i} {
+        0% { top: getTopPercent($i); }
+        50% { top: calc(#{$i}% - 10px); }
+        100% { top: getTopPercent($i); }
+    }
+    @-webkit-keyframes radomTopPercentDelete-#{$i} {
+        0% { top: getTopPercent($i); }
+        50% { top: calc(#{$i}% - 10px); }
+        100% { top: getTopPercent($i); }
+    }
+    .apb-#{$i} {
+        animation: radomBottomPercent-#{$i} 2s infinite;
+        -webkit-animation: radomBottomPercent-#{$i} 2s infinite; /*表示无限循环*/
+    }
+    @keyframes radomBottomPercent-#{$i} {
+        0% { bottom: getTopPercent($i); }
+        50% { bottom: calc(#{$i}% + 10px); }
+        100% { bottom: getTopPercent($i); }
+    }
+    @-webkit-keyframes radomBottomPercent-#{$i} {
+        0% { bottom: getTopPercent($i); }
+        50% { bottom: calc(#{$i}% + 10px); }
+        100% { bottom: getTopPercent($i); }
+    }
+    .apb-delete-#{$i} {
+        animation: radomBottomPercentDelete-#{$i} 2s infinite;
+        -webkit-animation: radomBottomPercentDelete-#{$i} 2s infinite; /*表示无限循环*/
+    }
+    @keyframes radomBottomPercentDelete-#{$i} {
+        0% { bottom: getTopPercent($i); }
+        50% { bottom: calc(#{$i}% - 10px); }
+        100% { bottom: getTopPercent($i); }
+    }
+    @-webkit-keyframes radomBottomPercentDelete-#{$i} {
+        0% { bottom: getTopPercent($i); }
+        50% { bottom: calc(#{$i}% - 10px); }
+        100% { bottom: getTopPercent($i); }
+    }
+
+}

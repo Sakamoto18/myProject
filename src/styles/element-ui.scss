@@ -1,0 +1,19 @@
+.el-carousel__item {
+    background-color: transparent;
+    margin: 0;
+}
+.el-popover {
+    background: rgba(51,122,183,0.5);
+    min-width: 10px;
+    color: #ffffff !important;
+    border-radius: 8px;
+    border: 1px solid transparent !important;
+}
+.el-popover[x-placement^=bottom] .popper__arrow{
+    /*el-popover上边三角下层的颜色---也就是视觉上的边框*/
+    border-bottom-color: rgba(51,122,183,0.3);
+}
+.el-popover[x-placement^=bottom] .popper__arrow::after{
+    /*el-popover上边三角表层的颜色---也就是视觉上的角*/
+    border-bottom-color: rgba(51,122,183,0.3);
+}

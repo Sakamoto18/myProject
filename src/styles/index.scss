@@ -1,0 +1,196 @@
+@import './element-ui.scss';
+@import './animation.scss';
+@import './bubble.scss';
+@import './timeline.scss';
+
+body {
+    height: 100%;
+    margin: 0px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  }
+
+  label {
+    font-weight: 700;
+  }
+
+  html {
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    background: #cccccc;
+  }
+.main-out {
+    height: 100%;
+    overflow-y: auto;
+    background-color: #a0a0a0;
+}
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.bg-white {
+    background-color: #ffffff;
+}
+.bg-gray {
+    background-color: #cccccc;
+}
+.bg-black {
+    background-color: #000;
+}
+.color-gray {
+    color: #cccccc;
+}
+.color-white {
+    color: #ffffff;
+}
+.color-red {
+    color: red;
+}
+.color-yellow {
+    color: yellow;
+}
+.bg-transparent {
+    background: transparent;
+}
+.bd-gray {
+    border: 1px solid #cccccc;
+}
+.shadow-white {
+    box-shadow: 2px 2px 35px 2px rgba(255,255,255,0.9);
+}
+.shadow-gray {
+    box-shadow: 2px 2px 35px 2px rgba(204,204,204,0.9);
+}
+.shadow-black {
+    box-shadow: 2px 2px 35px 2px rgba(0,0,0,0.9);
+}
+.icon-space {
+    margin-right: 4px;
+}
+@for $i from 6 to 80 {
+    .h-#{2*$i}{
+        font-size: $i * 2px
+    }
+}
+@for $i from 6 to 80 {
+    .h-#{2*$i}{
+        font-size: $i * 2px
+    }
+}
+@function getSpace($num) {
+    @return $num * 4px;
+}
+@for $i from 0 to 100 {
+    .p-#{$i}{
+        padding: getSpace($i) !important;
+    }
+    .pl-#{$i}{
+        padding-left: getSpace($i) !important;
+    }
+    .pr-#{$i}{
+        padding-right: getSpace($i) !important;
+    }
+    .pt-#{$i}{
+        padding-top: getSpace($i) !important;
+    }
+    .pb-#{$i}{
+        padding-bottom: getSpace($i) !important;
+    }
+    .px-#{$i}{
+        padding-left: getSpace($i) !important;
+        padding-right: getSpace($i) !important;
+    }
+    .py-#{$i}{
+        padding-top: getSpace($i) !important;
+        padding-bottom: getSpace($i) !important;
+    }
+    .m-#{$i}{
+        margin: getSpace($i) !important;
+    }
+    .ml-#{$i}{
+        margin-left: getSpace($i) !important;
+    }
+    .mr-#{$i}{
+        margin-right: getSpace($i) !important;
+    }
+    .mt-#{$i}{
+        margin-top: getSpace($i) !important;
+    }
+    .mb-#{$i}{
+        margin-bottom: getSpace($i) !important;
+    }
+    .mx-#{$i}{
+        margin-left: getSpace($i) !important;
+        margin-right: getSpace($i) !important;
+    }
+    .my-#{$i}{
+        margin-top: getSpace($i) !important;
+        margin-bottom: getSpace($i) !important;
+    }
+}
+.z-1000 {
+    z-index: 1000;
+}
+.pointer {
+    cursor: pointer;
+}
+.full {
+    width: 100%
+}
+.half {
+    width: 50%
+}
+.flex {
+    display: flex;
+}
+.absolute-center {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.bold {
+    font-weight: bold;
+}
+.font-family-kai {
+    font-family: 'STXingkai'
+}
+.font-family-roman {
+    font-family: 'Times New Roman';
+}
+.t-center {
+    text-align: center;
+}
+.t-left {
+    text-align: left;
+}
+.t-right {
+    text-align: right;
+}
+.t-line-through {
+    text-decoration: line-through
+}
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+.f-none {
+    float: none;
+}
+.inline-block {
+    display: inline-block;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.QR-code {
+    width: 200px;
+    height: 200px;
+}
