@@ -6,15 +6,24 @@
         <div class="absolute z-1000 bg-transparent personal-card">
             <el-popover placement="bottom" title trigger="hover" width="205" class="z-1000" transition="fade-in-linear">
                 <div class="QR-code inline-block">
+                    <img style="width:100%;height:100%;" :src="Bilibili"/>
+                </div>
+                <svg-icon slot="reference" icon-class="bilibili" class="icon-space pointer h-20 mt-1 ml-2"></svg-icon>
+            </el-popover>
+            <el-popover placement="bottom" title trigger="hover" width="205" class="z-1000" transition="fade-in-linear">
+                <div class="QR-code inline-block">
                     <img style="width:100%;height:100%;" :src="QQImg"/>
                 </div>
-                <svg-icon slot="reference" icon-class="qq" class="icon-space pointer h-30 mt-1 ml-2"></svg-icon>
+                <svg-icon slot="reference" icon-class="qq" class="icon-space pointer h-20 mt-1"></svg-icon>
             </el-popover>
             <el-popover placement="bottom" title trigger="hover" width="205" class="z-1000" transition="fade-in-linear">
                 <div class="QR-code inline-block">
                     <img style="width:100%;height:100%;" :src="weChatImg"/>
                 </div>
-                <svg-icon slot="reference" icon-class="we-chat" class="icon-space pointer h-30 mt-1"></svg-icon>
+                <svg-icon slot="reference" icon-class="we-chat" class="icon-space pointer h-20 mt-1"></svg-icon>
+            </el-popover>
+            <el-popover content="github" placement="bottom" title trigger="hover" width="40" class="z-1000" transition="fade-in-linear">
+                <svg-icon slot="reference" icon-class="GitHub" class="icon-space pointer h-20 mt-1"></svg-icon>
             </el-popover>
         </div>
         <div class="t-center relative" @wheel.prevent="scrollMethod">
@@ -138,6 +147,7 @@ export default {
             ],
             QQImg: require('@/assets/QQ.jpg'),
             weChatImg: require('@/assets/weChat.jpg'),
+            Bilibili: require('@/assets/bilibili.jpg'),
             ifMouseMove: true,
             showGuideBar: false,
             fadeFlag: false, // 渲染标志
@@ -239,7 +249,7 @@ export default {
 }
 .personal-card {
     height: 40px;
-    width: 85px;
+    width: 155px;
     top: 10px; left: 5px;
     border-radius: 5px;
 }
