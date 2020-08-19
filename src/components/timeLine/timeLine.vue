@@ -24,9 +24,9 @@ export default {
     data() {
         return {
             experienseList: [
-                { date: '2020年', company: '上海金仕达数据系统有限公司', content: '前端开发工程师' },
-                { date: '2019年6月', company: '天津科技大学', content: '软件工程' },
-                { date: '2018年10月', company: '上海金仕达数据系统有限公司', content: '前端开发工程师（实习）' }
+                { date: '2020年', company: '上海金仕达数据系统有限公司', content: `前端开发工程师\n负责前端页面开发及数据联调，并且与产品沟通交互，优化性能以及产品的后期维护` },
+                { date: '2019年6月', company: '天津科技大学', content: `软件工程\n校三级奖学金，大学英语六级` },
+                { date: '2018年10月', company: '上海金仕达数据系统有限公司', content: `前端开发工程师（实习）\n负责Vue前端页面开发和数据联调` }
             ],
             year: ''
         }
