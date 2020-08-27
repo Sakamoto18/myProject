@@ -10,19 +10,36 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-  }
+}
 
-  label {
+label {
     font-weight: 700;
-  }
+}
 
-  html {
+html {
     height: 100%;
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;
     background: #cccccc;
-  }
+}
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+// 注意，a标签hover必须放在link和visited之后才生效，active必须放hover后才生效
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+a:active {
+    color: #A6DB6D;
+    text-decoration-color: underline;
+}
 .main-out {
     height: 100%;
     overflow-y: auto;
@@ -139,6 +156,9 @@ body {
 }
 .pointer {
     cursor: pointer;
+}
+.cursor-none {
+    cursor: none;
 }
 .full {
     width: 100%

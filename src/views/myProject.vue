@@ -33,11 +33,14 @@
                     <div v-if="item === '1'">
                         <bubble-flow>
                                 <div slot="card" class="name-card animation-0 flex absolute-center relative" :class="{shadow: ifMouseMove}">
-                                    <div class="h-70 font-family-kai color-white bold full">我叫吕宇宁</div>
-                                    <div class="h-20 font-family-roman color-white full">Love Code. Show Code</div>
-                                    <div class="h-20 font-family-kai color-white full">一名前端开发工程师</div>
+                                    <div class="h-70 font-family-kai color-white bold full cursor-none">我叫吕宇宁</div>
+                                    <div class="h-20 font-family-roman color-white full cursor-none">Love Code. Show Code</div>
+                                    <div class="h-20 font-family-kai color-white full cursor-none">一名前端开发工程师</div>
                                     <div class="h-20 color-white font-family-roman full">
                                         <span class="pointer e-mail">lvyuning.banben@foxmail.com</span>
+                                    </div>
+                                    <div class="h-20 color-white font-family-roman cursor-none full">
+                                        <span>github: <a href="https://github.com/Sakamoto18" target="_blank">https://github.com/Sakamoto18</a></span>
                                     </div>
                                 </div>
                         </bubble-flow>
