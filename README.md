@@ -1,8 +1,8 @@
-# my_project  这是我个人的网页简历，有兴趣的可以拿去当模板改造
+# 这是我个人的网页简历，有兴趣的可以拿去当模板改造
 
 > A Vue.js project
 
-## Build Setup  搭建步骤
+# Build Setup  搭建步骤
 
 ``` 安装依赖
 # install dependencies
