@@ -264,7 +264,7 @@ export default {
     border-radius: 50px;
 }
 .guide-button:focus {
-    outline: none;
+    outline: none; // 防止点击后聚焦出现border框
 }
 .e-mail:hover {
     text-decoration: underline
