@@ -9,7 +9,10 @@
     justify-content: center; // 灵活布局，水平垂直居中
     align-items:center; // 灵活布局，水平垂直居中
     align-content: center;
-    background:#a0a0a0;
+    // background:#a0a0a0;
+    background-image: url('../assets/index.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .bubbles .bubble {
     position: absolute;
@@ -31,7 +34,7 @@
     height: 50%;
     border-radius: 100%;
     filter: blur(20px);
-    background: radial-gradient(circle at top, rgba(160,160,160, 0.2), rgba(160,160,160, 1) 50%);
+    background: radial-gradient(circle at top, rgba(160,160,160, 0.2), rgba(160,160,160, 0.4) 50%);
 }
 
   .bubble:nth-of-type(1) {
