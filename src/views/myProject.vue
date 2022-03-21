@@ -22,7 +22,10 @@
                 </div>
                 <svg-icon slot="reference" icon-class="we-chat" class="icon-space pointer h-20 mt-1"></svg-icon>
             </el-popover>
-            <el-popover content="github" placement="bottom" title trigger="hover" width="40" class="z-1000" transition="fade-in-linear">
+            <el-popover placement="bottom" title trigger="hover" width="205" class="z-1000" transition="fade-in-linear">
+                <div class="QR-code inline-block">
+                    <img style="width:100%;height:100%;" :src="github"/>
+                </div>
                 <svg-icon slot="reference" icon-class="GitHub" class="icon-space pointer h-20 mt-1"></svg-icon>
             </el-popover>
         </div>
@@ -58,7 +61,9 @@
                                 <div class="full bold py-2">--我可以</div>
                                 <div class="full">前端开发，利用各种技巧实现交互丰富的页面，以及组件化开发。</div>
                                 <div class="bold full py-2">--关于我</div>
-                                <div class="full">坐标上海，现居虹口。目前任职于张江某科技公司，程序猿，前端攻城狮。业务方向是金融，为交易所，证券公司提供稳定的营运、交易系统。技术栈 Vue + ES6 + js + Element-ui。</div>
+                                <div class="full">坐标上海，现居虹口。</div>
+                                <div class="full">19-20任职于张江某科技公司，程序猿，前端攻城狮。业务方向是金融，为交易所，证券公司提供稳定的营运、交易系统。技术栈 Vue + ES6 + js + Element-ui。</div>
+                                <div class="full">20-22就职百度总部外包，base智能小程序研发部，负责行业漫画搜索卡片以及小程序和系列活动的开发，以及小程序开源和B端平台的业务。技术栈：小程序、san.js</div>
                                 <div class="full py-2">执行力强，有耐心，细致，善于学习！目前可以做点粗粗糙糙的设计。</div>
                             </div>
                         </div>
@@ -142,15 +147,17 @@ export default {
                 backgroundSize: "cover",
             },
             skillsPie: [
-                {value: 50, name: 'JavaScript'},
+                {value: 70, name: 'JavaScript'},
                 {value: 80, name: 'HTML5'},
                 {value: 50, name: 'ES6'},
-                {value: 60, name: 'Vue'},
-                {value: 65, name: 'CSS3'}
+                {value: 70, name: 'Vue'},
+                {value: 65, name: 'CSS3'},
+                {value: 60, name: '小程序'}
             ],
             QQImg: require('@/assets/QQ.jpg'),
             weChatImg: require('@/assets/weChat.jpg'),
             Bilibili: require('@/assets/bilibili.jpg'),
+            github: require('@/assets/github.png'),
             ifMouseMove: true,
             showGuideBar: false,
             fadeFlag: false, // 渲染标志
@@ -185,7 +192,7 @@ export default {
             }, 400)
         },
         scrollMethod(e) {
-            this.$utl.throttle(() => {
+            this.$utl.debounce(() => {
                 if (!this.showGuideBar) {
                     if (e.wheelDelta > 0) {
                         this.goahead()
@@ -306,7 +313,7 @@ export default {
     background: rgba(180,180,180, 0.8);
     right: 0px;
     top: 230px;
-    height: 1500px;
+    height: 100rem;
     transform: skewY(-64deg);
     flex-direction:  column;
 }

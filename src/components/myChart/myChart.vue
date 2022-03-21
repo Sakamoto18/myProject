@@ -167,7 +167,7 @@ export default {
             const data = this.chartData
             data.forEach(item => {
                 this.labelList.push(item.name)
-                this.count = this.count + item.value
+                this.count += item.value
             })
             this.initChart()
             // 判断是否是初次加载此图，如果是则执行一次图例函数，并且将标记置为false，
@@ -185,7 +185,7 @@ export default {
             this.chart.on('legendselectchanged', function(params) {
                 // params中有两个参数，1.name，当前点击的图例名；2.selected对象，里面存放图例名以及对应的选中状态
                 if (!params.selected[params.name]) {
-                    $this.chartData.forEach((item) => {
+                    $this.chartData.forEach(item => {
                         if (item.name === params.name) {
                             $this.count = $this.count - item.value
                         }

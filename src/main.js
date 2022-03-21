@@ -13,6 +13,7 @@ import 'default-passive-events' // Chrome优化页面的滑动性能，目前仅
 import './icons'
 
 
+
 Vue.config.productionTip = false
 Vue.use(ElementUi)
 Vue.prototype.$echarts = echarts;
